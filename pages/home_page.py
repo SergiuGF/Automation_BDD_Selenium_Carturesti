@@ -85,15 +85,8 @@ class HomePage(BasePage):
         self.click(self.HYPERLINK_BTNS[button_name])
 
     def check_url(self, expected_URL):
-        acc = (By.XPATH, '//*[@id="facebook"]/body/div[3]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div[2]/div[1]/div/div[1]/div/span/span')
-        # if self.is_element_displayed(acc):
-        #     sleep(2)
-        #     self.click(acc)
-        sleep(2)
-        self.click(acc)
         current_url = self.current_url()
         assert current_url == expected_URL
-        sleep(2)
 
     """Language"""
     def set_to_romanian(self):
